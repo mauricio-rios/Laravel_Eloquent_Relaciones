@@ -46,4 +46,11 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    //creamos un nuevo metodo para que un usuario tenga un perfil, en este caso solo va tener un perfil el usuario
+
+    public function profile()
+    {
+        return $this-> hasOne(Profile::class);
+    }
 }
